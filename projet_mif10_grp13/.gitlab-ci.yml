@@ -1,0 +1,29 @@
+image: maven:3.6.1-jdk-11 
+
+stages:
+    - build
+    - test
+    - deploy
+
+build : 
+    stage : build
+    before_script:
+        - . setup-mvn-proxy.sh
+    script :
+        - cd sportify && mvn compile
+
+test : 
+    stage : test
+    before_script:
+        - . setup-mvn-proxy.sh
+    script :
+        - cd sportify && mvn test 
+
+
+deploy : 
+    stage : deploy
+    before_script:
+        - . setup-mvn-proxy.sh && echo "$CI_SSH_KEY" > ci_private_key.pem && chmod 400 ci_private_key.pem
+    script :
+        - cd sportify && mvn package
+        - scp -v -o StrictHostKeyChecking=no -i ../ci_private_key.pem /builds/p1711842/projet_mif10_grp13/sportify/target/sportify.war gitlabci@192.168.74.211:/opt/tomcat/webapps/sportify.war
