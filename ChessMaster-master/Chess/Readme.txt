@@ -6,20 +6,20 @@ Projet : Jeux d'echec deux joueurs jouable sur un terminal.
 
 Modifications:
 
-	-Dernière version sortie le 23 avril 2018.
+	-DerniÃ¨re version sortie le 23 avril 2018.
 
 Utilisation:
 
-	-Ce jeu ne nécessite qu'un compilateur.
-	-Vous pouvez utiliser codeblocks pour démarrer le jeu.
-	-Les règles du jeu sont identiques au jeu original.
+	-Ce jeu ne nÃ©cessite qu'un compilateur.
+	-Vous pouvez utiliser codeblocks pour dÃ©marrer le jeu.
+	-Les rÃ¨gles du jeu sont identiques au jeu original.
 
 -------------------------------------------------------------------------
 
 Espace Codeurs:
 
 	-4 classes principales (Jeu | Joueur | Pieces | Plateau )
-	-1 classe SFML ( éventuellement si on a le temps )
+	-1 classe SFML ( Ã©ventuellement si on a le temps )
 	-2 main : un main pour le mode texte et un pour le sfml 
 	-2 Dossiers : include, src (.cpp/.h)
 	-1 Makefile
@@ -27,7 +27,7 @@ Espace Codeurs:
 
 Diagramme des classes:
 
-	-réalisation du diagramme avec le logiciel libre DIA
+	-rÃ©alisation du diagramme avec le logiciel libre DIA
 
 			-----------
 			| Jeu_txt |	
@@ -43,17 +43,17 @@ Diagramme des classes:
 	---------	   ---------
 
 
-à propos:
+Ã  propos:
 
-	Nous avons tester une première version du jeu sans les classes afin
-	de vérifier si le jeu était fonctionnel puis nous avons implémenté
+	Nous avons tester une premiÃ¨re version du jeu sans les classes afin
+	de vÃ©rifier si le jeu Ã©tait fonctionnel puis nous avons implÃ©mentÃ©
 	le code dans 4 classes pour le rendre plus lisible et modifiable.
-	Des modifications ont été nécessaire pour concevoir la dernière fonction
+	Des modifications ont Ã©tÃ© nÃ©cessaire pour concevoir la derniÃ¨re fonction
 	de mise en echec du roi.
 
 -----------------------------------------------------------------------------
 
 Credits:
 
-	Projet réalisé par 4 étudiants dans le cadre d'une licence informatique.
+	Projet rÃ©alisÃ© par 4 Ã©tudiants dans le cadre d'une licence informatique.
 	
