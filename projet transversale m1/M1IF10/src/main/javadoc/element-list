@@ -1,0 +1,9 @@
+unnamed package
+com.m1if10.app.classes
+com.m1if10.app.dao
+com.m1if10.app.modele
+com.m1if10.app.modele.jackson
+com.m1if10.app.servlets
+com.m1if10.app.servlets.Etudiant
+com.m1if10.app.servlets.Professeur
+com.m1if10.app.servlets.Scolarite
