@@ -1,0 +1,28 @@
+
+all:chess
+
+chess: mainTxt.o  Jeu.o Pieces.o Joueur.o Plateau.o
+	g++  -o bin/Debug/chess obj/Debug/src/Carte.o obj/Debug/src/Joueur.o obj/Debug/main.o obj/Debug/src/Partie.o obj/Debug/src/Pioche.o  
+
+mainTxt.o: src/main.cpp
+	g++ -Wall  -std=c++11 -Iinclude -I/usr/include/SFML -c mainTxt.cpp -o obj/mainTxt.o
+
+
+Jeu.o: include/Jeu.h src/Jeu.cpp
+	g++ -Wall  -std=c++11 -Iinclude -Iinclude -I/usr/include/SFML -c src/Jeu.cpp -o obj/Debug/src/Jeu.o
+
+Pieces.o: include/Pieces.h src/Pieces.cpp
+	g++ -Wall -std=c++11 -Iinclude -I/usr/include/SFML -c src/Pieces.cpp -o obj/Debug/src/Pieces.o
+
+Joueur.o: include/Joueur.h src/Joueur.cpp
+	g++ -Wall -std=c++11 -Iinclude -I/usr/include/SFML -c src/Joueur.cpp -o obj/Debug/src/Joueur.o
+
+Plateau.o: include/Plateau.h src/Plateau.cpp
+	g++ -Wall  -std=c++11 -Iinclude -I/usr/include/SFML -c src/Plateau.cpp -o obj/Debug/src/Plateau.o
+
+
+clean:
+		rm *.o
+		
+veryclean: clean rm *.out
+

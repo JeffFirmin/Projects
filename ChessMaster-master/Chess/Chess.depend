@@ -1,0 +1,275 @@
+# depslib dependency file v1.0
+1522742586 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/src/Jeu.cpp
+	"Jeu.h"
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+	<iostream>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
+1522742596 /home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/include/Jeu.h
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+
+1522100696 /home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/include/Pieces.h
+	<vector>
+	<stdlib.h>
+	"Plateau.h"
+
+1522140738 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/src/Joueur.cpp
+	"Joueur.h"
+	"Pieces.h"
+	<iostream>
+	<vector>
+	<stdlib.h>
+
+1522140605 /home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/include/Joueur.h
+	"Pieces.h"
+	<vector>
+	<stdlib.h>
+
+1522141855 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/src/Pieces.cpp
+	"Pieces.h"
+	<iostream>
+
+1522742410 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/src/Plateau.cpp
+	"Plateau.h"
+	"Pieces.h"
+	<iostream>
+	<stdlib.h>
+	<string.h>
+
+1522742037 /home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/include/Plateau.h
+	"Pieces.h"
+
+1522140193 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/main.cpp
+	"Jeu.h"
+	<iostream>
+
+1522738598 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/src/sdlChess.cpp
+	"sdlChess.h"
+
+1522738612 /home/dayoute/Bureau/L2_Informatique/LIFAP4/PROJET_Chess_Master/Chess_Master/ChessMaster/Chess/include/sdlChess.h
+
+1522944996 source:c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\main.cpp
+	"Jeu.h"
+	<iostream>
+
+1522949435 c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\include\jeu.h
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+
+1522944996 c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\include\pieces.h
+	<vector>
+	<stdlib.h>
+	"Plateau.h"
+
+1522946502 c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\include\plateau.h
+	"Pieces.h"
+
+1522944996 c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\include\joueur.h
+	"Pieces.h"
+	<vector>
+	<stdlib.h>
+
+1522950197 source:c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\src\jeu.cpp
+	"Jeu.h"
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+	<iostream>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
+1522944996 source:c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\src\joueur.cpp
+	"Joueur.h"
+	"Pieces.h"
+	<iostream>
+	<vector>
+	<stdlib.h>
+
+1522944996 source:c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\src\pieces.cpp
+	"Pieces.h"
+	<iostream>
+
+1522949245 source:c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\src\plateau.cpp
+	"Plateau.h"
+	"Pieces.h"
+	<iostream>
+	<stdlib.h>
+	<string.h>
+
+1522944996 source:c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\src\sdlchess.cpp
+	"sdlChess.h"
+
+1522944996 c:\users\dayoute\desktop\l2 informatique\s4\conception applicatioins lifap4\projet_2018\chessmaster\chess\include\sdlchess.h
+
+1524443399 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	<time.h>
+	<string>
+
+1523347906 /home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/include/Jeu.h
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+	<string.h>
+
+1523347966 /home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/include/Pieces.h
+	<vector>
+	<stdlib.h>
+	"Plateau.h"
+
+1523347999 /home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/include/Plateau.h
+	"Pieces.h"
+
+1523347924 /home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/include/Joueur.h
+	"Pieces.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1523487458 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/src/Jeu.cpp
+	"Jeu.h"
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+	<iostream>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
+1523348084 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/src/Joueur.cpp
+	<iostream>
+	"Joueur.h"
+	"Pieces.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1523348155 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/src/Pieces.cpp
+	"Pieces.h"
+	<iostream>
+	<string>
+	<string.h>
+
+1523348207 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/src/Plateau.cpp
+	"Plateau.h"
+	"Pieces.h"
+	<iostream>
+	<stdlib.h>
+	<string.h>
+
+1523707577 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/src/sdlChess.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<math.h>
+	"Jeu.h"
+	"sdlChess.h"
+
+1523707587 /home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/include/sdlChess.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	"Jeu.h"
+
+<<<<<<< HEAD
+1524344525 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/src/sfmlChess.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<time.h>
+	<string>
+
+1524236772 /home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/include/sfmlChess.h
+	<SFML/Graphics.hpp>
+
+1524437916 source:/home/dayoute/Bureau/L2_Informatique/LIFAP4/ChessMaster/Chess/mainTxt.cpp
+	"Jeu.h"
+=======
+1524220947 source:/home/ali/Bureau/LIFAP4/ChessMaster/Chess/main.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+	<time.h>
+
+1523536195 /home/ali/Bureau/LIFAP4/ChessMaster/Chess/include/Jeu.h
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+	<string.h>
+
+1523536195 /home/ali/Bureau/LIFAP4/ChessMaster/Chess/include/Pieces.h
+	<vector>
+	<stdlib.h>
+	"Plateau.h"
+
+1523536195 /home/ali/Bureau/LIFAP4/ChessMaster/Chess/include/Plateau.h
+	"Pieces.h"
+
+1523536195 /home/ali/Bureau/LIFAP4/ChessMaster/Chess/include/Joueur.h
+	"Pieces.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1523908342 /home/ali/Bureau/LIFAP4/ChessMaster/Chess/include/sdlChess.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	"Jeu.h"
+
+1523536195 source:/home/ali/Bureau/LIFAP4/ChessMaster/Chess/src/Jeu.cpp
+	"Jeu.h"
+	"Pieces.h"
+	"Joueur.h"
+	"Plateau.h"
+	<iostream>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
+1523536195 source:/home/ali/Bureau/LIFAP4/ChessMaster/Chess/src/Joueur.cpp
+	<iostream>
+	"Joueur.h"
+	"Pieces.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1523536195 source:/home/ali/Bureau/LIFAP4/ChessMaster/Chess/src/Pieces.cpp
+	"Pieces.h"
+	<iostream>
+	<string>
+	<string.h>
+
+1523536195 source:/home/ali/Bureau/LIFAP4/ChessMaster/Chess/src/Plateau.cpp
+	"Plateau.h"
+	"Pieces.h"
+	<iostream>
+	<stdlib.h>
+	<string.h>
+
+1523908617 source:/home/ali/Bureau/LIFAP4/ChessMaster/Chess/src/sdlChess.cpp
+	"sdlChess.h"
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<math.h>
+	"Jeu.h"
+	"sdlChess.h"
+>>>>>>> 3dd2830f552a1103633d0f7ed5a314ee2cb5ba8f
+
