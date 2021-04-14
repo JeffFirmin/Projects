@@ -1,0 +1,24 @@
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+
+{% block body %}
+{# ... #}
+<div id="fos_comment_thread" data-thread="{{ thread.id }}">
+
+{% include '@FOSComment/Thread/comments.html.twig' with {
+    'comments': comments,
+    'thread': thread
+} %}
+
+</div>
+{# ... #}
+{% endblock body %}
+
+{% block javascript %}
+{# jQuery must be available in the page by this time, and make sure javascript block is after
+  <div id="fos_comment_thread"> in the DOM Tree, for example right before </body> tag
+#}
+{% javascripts '@FOSCommentBundle/Resources/public/js/comments.js' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock javascript %}

@@ -1,0 +1,155 @@
+{# src/OC/CoreBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}News book{% endblock %}</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>  
+
+    {% block stylesheets %}
+      {# On charge le CSS de bootstrap depuis le site directement         'cssrewrite',       #}
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+      {% stylesheets filter='?scssphp'
+      'bundles/ocplatform/css/main.css' 
+      'bundles/ocplatform/css/platform.css '%}
+      <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+      {% endstylesheets %}
+      
+      <link rel="stylesheet" href="/Symfony/web/app_dev.php/css/519c4f6_main_1.css" type="text/css" />
+      <link rel="stylesheet" href="/Symfony/web/app_dev.php/css/03b7e21_platform_2.css" type="text/css" />
+      <link rel="stylesheet" href="/Symfony/web/css/cd91cad.css" type="text/css" />
+    {% endblock %}    
+
+  </head>
+<div id="header" class="nav nav-pills nav-stacked">
+      
+
+	<nav class="navbar navbar-default navbar-fixed-top  ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ path('oc_platform_home') }}">NewsBook 📖</a>
+    </div>
+    {# Notre menu  #}
+    <ul class="nav navbar-nav"> 
+      <li class="active"><a href="{{ path('oc_platform_home') }}">Accueil</a></li>  
+      <li><a href="{{ path('oc_platform_tagpolitique') }}">Politique</a></li>
+      <li><a href="{{ path('oc_platform_tagculture') }}">Culture</a></li>
+      <li><a href="{{ path('oc_platform_tagsport') }}">Sport</a></li>
+      <li><a href="{{ path('oc_platform_tagdivertissement') }}">Divertissement</a></li>
+      <li><a href="{{ path('oc_platform_tagscience') }}">Science</a></li>
+
+          {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+           <li><a href="{{ path('oc_platform_add') }}">Ajouter une nouvelle</a></li> 
+           <li><a href="{{ path('oc_platform_aconnceutilisateur') }}">Vos publications</a></li>
+
+            {% else %}
+          
+         <li><a id="Erreur">Connectez-vous pour ajouter une annonce </a></li>
+          {% endif %}
+	
+	  <li class="nav navbar-nav navbar-right" id="login"	> 
+	  {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+         <a> Bonjour {{ app.user.username }} </a>
+    
+    
+        <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+       {% else %}
+         
+         <a href="{{ path('fos_user_registration_register') }}">Créer un compte</a>
+         <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+      {% endif %}</li></div> 
+    </ul></nav>
+  </div>
+
+  <body>
+    
+  
+
+  <div class="container">
+
+    <div class="row">
+      <div id="menu" class="col-md-3">
+
+        <h4>Dernières publications</h4>
+        {{ render(controller("OCPlatformBundle:Annonce:menu", {'limit': 5} )) }} 
+         
+
+         <h4>Les publications les  plus commentées </h4>
+        {{ render(controller("OCPlatformBundle:Annonce:menucomments", {'limit': 5} )) }}          
+
+      </div>
+      <div id="content" class="col-md-9">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <hr>
+
+ <footer>
+      
+  <p>
+      NewsBook ©{{ 'now'|date('Y') }}.
+  </p>
+
+  </footer>
+</div>
+
+  {% block javascripts %}
+    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+      {% javascripts filter='jsqueeze'
+      'bundles/ocplatform/js/main.js' %}
+      <script type="text/javascript" src="{{ asset_url }}"></script>
+      {% endjavascripts %}
+
+  {% endblock %}
+
+  </body>
+  
+   <style> #login{
+    display:block;
+	position:absolute;
+	right:5px;
+}
+
+nav li{
+	
+	float:right;
+}
+
+
+#login a{
+padding-top:0px;
+padding-bottom:0px;
+}
+
+#header{
+top:-5px;}
+
+#lemenu a{
+color:black;
+}
+
+#Erreur{
+color:red;
+}
+
+#dropdown-menu.a{
+left:0;
+
+}
+
+body{
+padding-top:100px;
+}
+</style>
+</html>

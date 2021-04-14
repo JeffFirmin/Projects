@@ -1,0 +1,13 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/menu.html.twig #}
+
+{# Ce template n'hérite de personne, tout comme le template inclus avec {{ include() }}. #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for annonce in listAnnonces %}
+    <li>
+      <a href="{{ path('oc_platform_view', {'id': annonce.id}) }}">
+        {{ annonce.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,65 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/index.html.twig #}
+
+{#
+{% include '@FOSComment/Thread/async.html.twig' with {'id': 'foo'} %}
+<!-- CSS -->
+{% stylesheets '@FOSCommentBundle/Resources/public/css/comments.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}   #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+<div id="header" class="jumbotron">
+      <h1>Bienvenue sur NewsBook</h1>
+	  
+	  <i> La liberté de partage d'informations </i>
+    </div>
+
+
+  <h2>Liste des Publications</h2>
+
+  <table class="table table-bordered table-striped">
+  <tr class="active">
+  <th> </th>
+  <th> Titre </th>
+  <th> Date </th>
+  <th> Auteur </th>
+  <ul>
+    {% for annonce in listAnnonce %}
+	<tr>
+	<td> {% if annonce.image is not null %}
+      <img
+        src="{{ asset(annonce.image.webPath) }}"
+        alt="{{annonce.image.alt }}"
+        height="60"
+      />
+    {% endif %} </td>
+      <td>
+        <a href="{{ path('oc_platform_view', {'id': annonce.id}) }}">
+          {{ annonce.title }}
+        </a> </td>
+		<td>le {{ annonce.date|date('d/m/Y') }} </td>
+        <td>Par {{ annonce.user.username }}</td>
+        
+       </tr>
+    {% else %}
+      <li>Pas (encore !) d'annonces</li>
+    {% endfor %}
+  </ul> </table>
+<div>
+  <ul class="pagination">
+    {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+    {% for p in range(1, nbPages) %}
+      <li{% if p == page %} class="active"{% endif %}>
+        <a href="{{ path('oc_platform_home', {'page': p}) }}">{{ p }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

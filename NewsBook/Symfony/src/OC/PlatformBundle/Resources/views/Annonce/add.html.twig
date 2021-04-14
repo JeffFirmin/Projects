@@ -1,0 +1,19 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/add.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block body %}
+ 
+ {% if is_granted('ROLE_AUTEUR') %}
+  <li><a href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>
+{% endif %}
+{#   <h2>Ajouter une annonce</h2> #}
+
+  {{ include("OCPlatformBundle:Annonce:form.html.twig") }}
+
+  <p>
+    Attention : cette annonce sera ajoutée directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+
+{% endblock %}

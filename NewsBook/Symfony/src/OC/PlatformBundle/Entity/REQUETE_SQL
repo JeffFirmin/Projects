@@ -1,0 +1,14 @@
+INSERT INTO oc_sous_rubriques VALUES(1,1, 'Musique');
+INSERT INTO oc_sous_rubriques VALUES(2,1, 'Sortie');
+INSERT INTO oc_sous_rubriques VALUES(3,1, 'Spectacle');
+INSERT INTO oc_sous_rubriques VALUES(4,2, 'Concert');
+INSERT INTO oc_sous_rubriques VALUES(5,2, 'Evènement');
+INSERT INTO oc_sous_rubriques VALUES(6,2, 'Actualité');
+INSERT INTO oc_sous_rubriques VALUES(7,3, 'Gouvernementale');
+INSERT INTO oc_sous_rubriques VALUES(8,3, 'Autres');
+INSERT INTO oc_sous_rubriques VALUES(9,4, 'Basket');
+INSERT INTO oc_sous_rubriques VALUES(10,4, 'Football');
+INSERT INTO oc_sous_rubriques VALUES(11,4, 'Tennis');
+INSERT INTO oc_sous_rubriques VALUES(12,5, 'Informatique');
+INSERT INTO oc_sous_rubriques VALUES(13,5, 'Technologie');
+INSERT INTO oc_sous_rubriques VALUES(14,5, 'Biologie');

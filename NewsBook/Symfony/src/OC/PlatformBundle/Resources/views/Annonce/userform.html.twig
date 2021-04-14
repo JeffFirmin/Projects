@@ -1,0 +1,49 @@
+
+<form id="form_recherche" action="{{ path('oc_platform_rechercher') }}" method="post">
+    {{ form_widget(form) }}
+    <input type="submit" value="Rechercher" />
+</form>
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
+
+  {# Génération manuelle et éclatée : #}
+  <div class="form-group">
+    {# Génération du label. #}
+    {{ form_label(form.username, "Nom de l'utilisateur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+    {# Affichage des erreurs pour ce champ précis. #}
+    {{ form_errors(form.username) }}
+
+
+<div class="loading"></div>
+<div id="resultats_recherche"> 
+
+     {{ include("OCPlatformBundle:Annonce:userform.html.twig") }}
+ 
+</div>
+
+<script>
+$(".loading").hide();
+$("#form_recherche").submit(function(){ 
+    $(".loading").show();
+    var motcle = $("#user_username").val();
+    var DATA = 'username=' + motcle;
+    $.ajax({
+        type: "POST",
+        url: "{{ path('oc_platform_rechercher')}}",
+        data: DATA,
+        cache: false,
+        success: function(data){
+           $('#resultats_recherche').html(data);
+           $(".loading").hide();
+        }
+    });    
+    return false;
+});
+</script>
+
+  </div>

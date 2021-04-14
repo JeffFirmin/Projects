@@ -1,0 +1,34 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/index.html.twig #}
+
+{#
+{% include '@FOSComment/Thread/async.html.twig' with {'id': 'foo'} %}
+<!-- CSS -->
+{% stylesheets '@FOSCommentBundle/Resources/public/css/comments.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}   #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Rubrique- {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Liste des Rubriques Sport </h2>
+
+  <ul>
+    {% for annonce in listRubrique %}
+      <li>
+        <a href="{{ path('oc_platform_view', {'id':annonce.id}) }}">
+          {{ annonce.title }}
+        </a>
+        par {{ annonce.user.username }},
+        le {{ annonce.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Pas (encore !) d'annonces</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

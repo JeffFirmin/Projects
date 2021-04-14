@@ -1,0 +1,34 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/user.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+<table class="table table-bordered table-striped">
+<tr>
+<th> Titre </th>
+<th> Date </th>
+</tr>
+
+  <h2>Vos publications {{app.user.username}} </h2>
+
+  
+   {% for annonce in annonces %}
+<tr class="active"> <td> <a href="{{ path('oc_platform_view', {'id': annonce.id}) }}"> {{ annonce.title }} </a> 
+</td><td> le {{ annonce.date|date('d/m/Y') }} </td> 
+<td>  <a href="{{ path('oc_platform_delete', {'id': annonce.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer l'annonce
+    </a>
+    {% else %}
+      <li>Aucune publication dans cette rubrique</li>
+    {% endfor %}
+  </td> 
+ </tr>
+ </table>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/index.html.twig #}
+
+{#
+{% include '@FOSComment/Thread/async.html.twig' with {'id': 'foo'} %}
+<!-- CSS -->
+{% stylesheets '@FOSCommentBundle/Resources/public/css/comments.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}   #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Rubrique Divertissement</h2>
+  <h4>Sous-rubrique Musique </h4>
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a style="color: #428bca; border-left: 1px solid black;" href="{{ path('oc_platform_sousrubriquedivertissementmusique') }}">Musique</a></li>
+	  <li><a style="color: #428bca; border-left: 1px solid black;" href="{{ path('oc_platform_sousrubriquedivertissementsortie') }}">Sortie</a></li>
+	  <li><a style="color: #428bca; border-left: 1px solid black;" href="{{ path('oc_platform_sousrubriquedivertissementspectacle') }}">Spectacle</a></li></div>
+	  
+<table class="table table-bordered table-striped">
+<tr>
+<th> </th>
+<th> Titre </th>
+<th> Date </th>
+<th> Auteur </th>
+</tr>
+
+{% for annonce in annonces %}
+<tr class="active"> 
+<td> {% if annonce.image is not null %}
+      <img
+        src="{{ asset(annonce.image.webPath) }}"
+        alt="{{annonce.image.alt }}"
+        height="60"
+      />
+    {% endif %} </td>
+<td> <a href="{{ path('oc_platform_view', {'id': annonce.id}) }}"> {{ annonce.title }} </a>
+<br/> 
+{% set text = annonce.content |split(' ') %} 
+
+{% if text|length > 5 %} 
+    {% for t in text|slice(0, 5) %}
+        {{ t }} 
+    {% endfor %}
+    ...
+{% else %}
+    {{ text|join(' ') }}
+{% endif %} </td>
+<td> le {{ annonce.date|date('d/m/Y') }} </td> 
+</td><td> {{annonce.user.username }} </td> 
+    {% else %}
+      <li>Aucune publication dans cette sous rubrique</li>
+    {% endfor %}
+ 
+ </tr>
+ </table></nav>
+
+{% endblock %}

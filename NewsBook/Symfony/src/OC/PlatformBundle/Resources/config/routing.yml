@@ -1,0 +1,206 @@
+# src/OC/PlatformBundle/Resources/config/routing.yml
+
+oc_platform_home:
+    path:      /{page}
+    defaults:
+        _controller: OCPlatformBundle:Annonce:index
+        page:        1
+    requirements:
+        page: \d*
+
+
+oc_platform_rechercher:
+    path:      /rechercher
+    defaults:
+        _controller: OCPlatformBundle:Annonce:rechercher
+    requirements:
+        id: \d+
+
+    
+oc_platform_view:
+    path:      /annonce/{id}
+    defaults:
+        _controller: OCPlatformBundle:Annonce:view
+    requirements:
+        id: \d+
+
+oc_platform_add:
+    path:      /add
+    defaults:
+        _controller: OCPlatformBundle:Annonce:add
+
+oc_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: OCPlatformBundle:Annonce:edit
+    requirements:
+        id: \d+
+
+oc_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: OCPlatformBundle:Annonce:delete
+    requirements:
+        id: \d+
+oc_platform_test:
+    path:      /test
+    defaults:
+        _controller: OCPlatformBundle:Annonce:test
+    requirements:
+        id: \d+
+
+oc_platform_tagpolitique:
+    path:    /tagpolitque
+    defaults:
+        _controller: OCPlatformBundle:Annonce:tagpolitque
+    requirements:
+        days: \d+
+
+oc_platform_tagsport:
+    path:    /tagsport
+    defaults:
+        _controller: OCPlatformBundle:Annonce:tagsport
+    requirements:
+        days: \d+
+
+oc_platform_tagculture:
+    path:    /tagculture
+    defaults:
+        _controller: OCPlatformBundle:Annonce:tagculture
+    requirements:
+        days: \d+
+
+oc_platform_tagdivertissement:
+    path:    /tagdivertissement
+    defaults:
+        _controller: OCPlatformBundle:Annonce:tagdivertissement
+    requirements:
+        days: \d+
+
+oc_platform_tagscience:
+    path:    /tagscience
+    defaults:
+        _controller: OCPlatformBundle:Annonce:tagscience
+    requirements:
+        days: \d+
+
+oc_platform_sousrubriquedivertissementmusique:
+    path:    /sousrubriquedivertissementmusique
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquemusique
+    requirements:
+        days: \d+
+        
+oc_platform_sousrubriquedivertissementsortie:
+    path:    /sousrubriquedivertissementsortie
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquesortie
+    requirements:
+        days: \d+
+        
+oc_platform_sousrubriquedivertissementspectacle:
+    path:    /sousrubriquedivertissementspectacle
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquespectacle
+    requirements:
+        days: \d+
+        
+oc_platform_sousrubriquecultureconcert:
+    path:    /sousrubriquecultureconcert
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriqueconcert
+    requirements:
+        days: \d+
+ 
+oc_platform_sousrubriquecultureevenement:
+    path:    /sousrubriquecultureevenement
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriqueevenement
+    requirements:
+        days: \d+
+     
+oc_platform_sousrubriquecultureactualite:
+    path:    /sousrubriquecultureactualite
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriqueactualite
+    requirements:
+        days: \d+
+        
+oc_platform_sousrubriquepolitiquegouvernementale:
+    path:    /sousrubriquepolitiquegouvernementale
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquegouvernementale
+    requirements:
+        days: \d+
+    
+oc_platform_sousrubriquepolitiqueautres:
+    path:    /sousrubriquepolitiqueautres
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriqueautres
+    requirements:
+        days: \d+
+
+oc_platform_sousrubriquesportbasket:
+    path:    /sousrubriquesportbasket
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquebasket
+    requirements:
+        days: \d+
+        
+oc_platform_sousrubriquesportfootball:
+    path:    /sousrubriquesportfootball
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquefootball
+    requirements:
+        days: \d+
+
+oc_platform_sousrubriquesporttennis:
+    path:    /sousrubriquesporttennis
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquetennis
+    requirements:
+        days: \d+ 
+        
+oc_platform_sousrubriquescienceinformatique:
+    path:    /sousrubriquescienceinformatique
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriqueinformatique
+    requirements:
+        days: \d+
+
+oc_platform_sousrubriquesciencetechnologie:
+    path:    /sousrubriquesciencetechnologie
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquetechnologie
+    requirements:
+        days: \d+         
+  
+oc_platform_sousrubriquesciencebiologie:
+    path:    /sousrubriquesciencebiologie
+    defaults:
+        _controller: OCPlatformBundle:Annonce:sousrubriquebiologie
+    requirements:
+        days: \d+ 
+  
+oc_platform_aconnceutilisateur:
+    path:    /annonceutilateur
+    defaults:
+        _controller: OCPlatformBundle:Annonce:annonceutilateur
+    requirements:
+        days: \d+
+
+
+oc_platform_purge:
+    path:     /purge/{days}
+    defaults:
+        _controller: OCPlatformBundle:Annonce:purge
+    requirements:
+        days: \d+
+
+oc_platform_show:
+    path:    /show
+    defaults:
+        _controller: OCPlatformBundle:Annonce:show
+
+
+

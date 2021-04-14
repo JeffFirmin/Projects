@@ -1,0 +1,101 @@
+{# src/OC/PlatformBundle/Resources/view/Annonce/view.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Lecture d'une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <div style="float: left; margin-right: 1em;">
+    {# On vérifie qu'une image soit bien associée à l'article #}
+    {% if annonce.image is not null %}
+      <img
+        src="{{ asset(annonce.image.webPath) }}"
+        alt="{{annonce.image.alt }}"
+        height="60"
+      />
+    {% endif %}
+  </div>
+  
+  <a href="{{ annonce.url }}">
+  <h2>{{ annonce.title }}</h2>
+  </a> 
+  {#<i>Par {{ annonce.author }}, le {{ annonce.date|date('d/m/Y') }}</i>  #}
+  <br/>
+   
+  <br/>
+  <i>Par {{ annonce.user.username }}, le {{ annonce.date|date('d/m/Y à  H:m:s') }}</i>    
+  
+  {# {{ app.user.username }} #}
+
+  <div class="well">
+    {{ annonce.content }}
+  </div>
+
+ <div>
+    <p>
+      Cette annonce est parue dans la rubrique suivante :
+        {{ annonce.rubrique.name }}
+    </p>
+ </div>
+
+ 
+  {% if not annonce.sousrubriques.empty %}
+    <p>
+      Et dans la(les) sous rubrique(s) :
+      {% for sousrubrique in annonce.sousrubriques %}
+        {{ sousrubrique.name }}{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+  
+
+  
+<p>
+<h3>Commentez l'annonce </h3>
+  
+  {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': annonce.id} %}
+
+</p>
+ 
+ <div id="header" class="nav nav-pills nav-stacked">
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+         <h4>  </h4>
+    </div> 
+
+  <p>
+    {% if annonce.user.username == app.user.username %}
+
+    <a href="{{ path('oc_platform_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+     </a>
+
+    <a href="{{ path('oc_platform_edit', {'id':annonce.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-edit"></i>
+      Modifier l'annonce
+    </a>
+    <a href="{{ path('oc_platform_delete', {'id': annonce.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer l'annonce
+    </a>
+    {% else %}
+      <h4>  </h4> 
+
+      <a href="{{ path('oc_platform_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+     </a>
+
+     {% endif %}
+
+    {% else %}
+      <h4>  </h4>
+
+    {% endif %}
+  </p>
+   
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{# src/OC/PlatformBundle/Resources/views/Annonce/index.html.twig #}
+
+{#
+{% include '@FOSComment/Thread/async.html.twig' with {'id': 'foo'} %}
+<!-- CSS -->
+{% stylesheets '@FOSCommentBundle/Resources/public/css/comments.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}   #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+<table class="table table-bordered table-striped">
+<tr>
+<th> Titre </th>
+<th> Date </th>
+</tr>
+
+  <h2>Vos publications {{app.user.username}} </h2>
+
+   {% for annonce in listAnnonce %}
+<tr class="active"> <td> <a href="{{ path('oc_platform_view', {'id': annonce.id}) }}"> {{ annonce.title }} </a> 
+</td><td> le {{ annonce.date|date('d/m/Y') }} </td> 
+<td>  <a href="{{ path('oc_platform_delete', {'id': annonce.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer l'annonce
+    </a>
+    {% else %}
+      <li>Vous n'avez encore rien publié</li>
+    {% endfor %}
+  </td> 
+ </tr>
+ </table>
+
+
+
+{#
+  <ul>
+    {% for annonce in listAnnonce %}
+      <li>
+        <a href="{{ path('oc_platform_view', {'id': annonce.id}) }}">
+          {{ annonce.title }}
+        </a>
+        le {{ annonce.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Vous n'avez encore rien publié</li>
+    {% endfor %}
+  </ul>
+#}
+
+{% endblock %}
