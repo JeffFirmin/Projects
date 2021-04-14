@@ -1,0 +1,32 @@
+.error {
+	font-size: 3rem;
+    width: 60%;
+    height: fit-content;
+    border-radius: 20px;
+    font-family: monospace;
+    text-align: center;
+    box-shadow: 3px 2px 8px grey;
+    color: white;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: #f56a79;
+}
+
+.error-msg {
+	font-size: 1.2rem;
+}
+
+.btn {
+	background-color: #FDC500;
+    border: none;
+    font-size: 1.5rem;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 3vh;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+}
+
+.btn:hover, .btn:focus {
+	background-color: #373434;
+}
