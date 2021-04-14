@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.m1if10.app.classes"},{"l":"com.m1if10.app.dao"},{"l":"com.m1if10.app.modele"},{"l":"com.m1if10.app.modele.jackson"},{"l":"com.m1if10.app.servlets"},{"l":"com.m1if10.app.servlets.Etudiant"},{"l":"com.m1if10.app.servlets.Professeur"},{"l":"com.m1if10.app.servlets.Scolarite"}]
