@@ -1,5 +1,5 @@
 # SPORTIFY 
-
+Site web pour la réservation d'un terrain
 Le guide de configuration de l'environnement de travail est orienté pour Linux, cependant certaines personnes aux seins de l'équipe ont travaillé sous windows. 
 Pour travailler sous windows nous vous conseillons d'installer le *sous-système Windows pour Linux* : [WSL]. 
 

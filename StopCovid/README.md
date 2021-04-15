@@ -2,6 +2,8 @@
 # Application StopCovid 
 par Jeff Firmin-Pignot et David Daily
 
+Le projet est une application pour gérer les cas contacts 
+
 ### Statut du projet
 
 Le projet est entièrement terminé et fonctionne avec toutes les fonctionnalités.

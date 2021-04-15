@@ -1,4 +1,5 @@
 # Projet Transversal M1 2019
+Site web SAVAPA gestion des alternants par QR Code
 Groupe n° 21 :
 - DAILY David
 - DULHOSTE Martin
