@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url("fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "ZillaSlab-Bold";
+	src: url("fonts/ZillaSlab-Bold.ttf") format("truetype");
+}
+
+.interface {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/* ============ HEADER ==============*/
+.interface-header {
+	position: fixed;
+	width: 82vw;
+	height: 6vh;
+	background-color: #373434;
+	transition: all 0.3s ease-in-out;
+	margin-left: 18vw;
+}
+
+.header-title {
+	color: #FDC500;
+	text-align: center;
+	font-family: ZillaSlab-Bold;
+	font-size: 4vh;
+}
+
+.deconnexion-button, .setting-button, .identifiant-button {
+	position: fixed;
+	right: 0;
+	top: 1vh;
+	padding: 2vh;
+	border: none;
+	cursor: pointer;
+	background-size: cover !important;
+}
+
+.deconnexion-button {
+	margin-right: 2vh;
+	background: url(../img/icone/Quitter.png) no-repeat;
+	background-size: cover;
+}
+
+.identifiant-button {
+	margin-right: 3.5vw;
+	background: url(../img/icone/tete.png) no-repeat;
+}
+
+/* ============ \HEADER ==============*/
+
+/* ============ MENU ==============*/
+.interface-menu {
+	padding-top: 6vh;
+	background-color: #282828;
+	width: 18vw;
+	height: 100vh;
+	font-family: Roboto-Light;
+}
+
+.user-info, .club-info {
+	text-align: center;
+}
+
+.profil-picture {
+	border-radius: 50%;
+	width: 8vw;
+}
+
+.profil-picture-large {
+	border-radius: 50%;
+	width: 14vw;
+}
+
+.user-name, .club-name {
+	color: white;
+	margin-top: 2vh;
+	font-size: 2vw;
+}
+
+.user-club, .club-coach {
+	color: grey;
+	margin-top: -0.5vh;
+}
+
+.btn-list {
+	margin-top: 3vh;
+}
+
+.menu-button {
+	border: none;
+	color: white;
+	text-align: left;
+	border-radius: 5px;
+	height: 5vh;
+	font-size: large;
+	padding-left: 80px;
+	margin-left: 5%;
+	margin-top: 15px;
+	cursor: pointer;
+	width: 90%;
+	background-size: 5vh !important;
+	background-position: 1vw !important;
+}
+
+.menu-button:hover, .menu-button:focus {
+	background-color: #FDC500;
+}
+
+.home-button {
+	background: url(../img/icone/home.png) no-repeat;
+	background-size: 5vh;
+}
+
+.event-button {
+	background: url(../img/icone/event.png) no-repeat;
+}
+
+.calendrier-button {
+	background: url(../img/icone/calendrier.png) no-repeat;
+	background-size: 5vh;
+}
+
+.club-button {
+	background: url(../img/icone/club.png) no-repeat;
+	background-size: 5vh;
+}
+
+.profil-button {
+	background: url(../img/icone/tete.png) no-repeat;
+	background-size: 5vh;
+}
+
+/* ============ \MENU ==============*/
+
+/* ============ CONTENU ==============*/
+.acceuil-home {
+	position: relative;
+	height: 100vh;
+}
+
+.bg-img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: no-repeat center center url("../img/landing-background.jpg");
+	background-size: cover;
+	filter: brightness(80%);
+	transition: all 0.5s ease-in-out;
+}
+
+.acceuil-text {
+	text-align: center;
+	position: absolute;
+	top: 20%;
+	width: 32vw;
+	margin-left: 25vw;
+	color: #FDC500;
+	font-size: 12vh; /* previously 7rem;*/
+	font-weight: 700;
+	animation-delay: 1s;
+	user-select: none;
+}
+
+.interface-contenu {
+	position: fixed;
+	width: 82vw;
+	height: 94vh;
+	top: 6vh;
+	left: 18vw;
+	background-color: #F8F8FF;
+}
+
+.interface-titles {
+	text-align: center;
+	color: grey;
+}
+
+hr.line {
+	width: 95%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid grey;
+	margin-top: 5px;
+}
+
+.table td, .table th {
+	text-align: center;
+	/* border-bottom: 1px solid #dee2e6 !important;
+	border-right: 1px solid #dee2e6 !important; */
+	border: 1px solid #dee2e6 !important;
+	vertical-align: inherit;
+	padding: 7px;
+}
+
+	/*=======PLANNING & LISTES========*/
+	.planning, .clubList, .adhList {
+		width : 76vw;
+		margin-left: 3vw;
+		height: 76vh;
+		margin-top: 1vh;
+	}
+
+	.planning-thead, .clubList-thead, .memberList-thead, .evenementList-thead{
+		background-color: #FDC500;
+	}
+
+    .th-line {
+		width: 7vw;
+		background-color: #373434;
+		color : #F8F8FF;
+	}
+    
+    .occupe {
+    	background-color: #ef9393;
+    }
+    
+   	.reserve {
+    	background-color: #59d9ff;
+    }
+    
+    /*=======\PLANNING & LISTES========*/
+    
+    /*=======FORM========*/
+    
+    .reservation-form {
+    	margin-top: 4vh;
+    	margin-bottom: 4vh;
+    }
+    
+    #day {
+    	 width: -webkit-fill-available;
+    }
+    
+    .form-row {
+		margin-left: 16vw;
+	    text-align: center;
+	    width: 50vw;
+    }
+    
+    .col-auto {
+		width: 10vw;
+	}
+    
+    .btn-primary {
+    	width: -webkit-fill-available;
+    	background-color : #FDC500;
+    	border: none;
+    }
+    .btn-primary:hover {
+    	background-color : #373434;
+    }
+    
+    /*=======\FORM========*/
+    
+    /*=======ACCOUNT INFOS========*/
+    
+    .user-infos {
+		font-size: 1.2rem;
+		text-align: center;
+		line-height: 2rem;
+		margin-top: 4vh;
+	}
+	
+	.subline {
+		margin-bottom: 0;
+	}
+	
+	.info-userClub {
+		font-size: 1.4rem;
+		color: grey;
+	}
+	
+	.info-name {
+		font-size: 3rem;
+    	font-weight: 600;
+	}
+
+	.infos-th{
+		font-weight: bold;
+	}
+	
+	/*=======\ACCOUNT INFOS========*/
+
+/* ============ \CONTENU ==============*/
+
+/* Cacher les éléments*/
+.membres.hidden {
+	display: none;
+}
+
+.reserver.hidden {
+	display: none;
+}
+
+.listeclubs.hidden {
+	display: none;
+}
+
+.profil.hidden {
+	display: none;
+}
+
+
+.evenement.hidden {
+	display: none;
+}
+
+.evenementTitle{
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	width: 32vw;
+	margin-left: 25vw;
+	color: grey;
+	font-size: 4rem; /* previously 7rem;*/
+	font-weight: 700;
+	animation-delay: 1s;
+	user-select: none;
+}
+
+
+
